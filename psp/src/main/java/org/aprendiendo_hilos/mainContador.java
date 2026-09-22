@@ -1,4 +1,4 @@
-package org.example;
+package org.aprendiendo_hilos;
 
 public class mainContador {
     static void main() {

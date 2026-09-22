@@ -1,4 +1,4 @@
-package org.example;
+package org.aprendiendo_hilos;
 
 public class runnableContador extends Thread implements Runnable{
     private Contador contador;

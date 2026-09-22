@@ -1,4 +1,4 @@
-package org.example;
+package org.aprendiendo_hilos;
 
 public class Contador {
     private int numero = 0;

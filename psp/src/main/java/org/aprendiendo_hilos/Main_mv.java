@@ -1,4 +1,4 @@
-package org.example;
+package org.aprendiendo_hilos;
 //una clase se ejecuta de forma lineal -  vertical arrancando desde la parte de arriba hasta abajo,
 // hay varias formas de interrumpir ese hilo de ejecucion y es creando otro con la clase thread
 // hay que arrancarlo con el metodo start
