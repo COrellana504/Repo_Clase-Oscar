@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <Button
+        style="?attr/materialIconButtonFilledStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:backgroundTint="@color/black"
+        app:icon="@drawable/baseline_play_circle_outline_24"
+        app:iconGravity="textStart"
+        app:iconSize="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/contador"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideTeamStart"
+        app:layout_constraintStart_toStartOf="@+id/guideMarginStart"
+        app:layout_constraintTop_toTopOf="@+id/contador"
+        app:layout_constraintVertical_bias="0.0"
+        app:strokeColor="@color/white" />
+
+    <TextView
+        android:id="@+id/contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 : 00"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="60sp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toStartOf="@+id/guideMidVErtical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideMidVErtical"
+        app:layout_constraintTop_toTopOf="@+id/guideMarginTop"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <TextView
+        android:id="@+id/posicion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.º"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/contador"
+        app:layout_constraintEnd_toStartOf="@+id/guideMarginEnd"
+        app:layout_constraintStart_toStartOf="@+id/guideTeam2End"
+        app:layout_constraintTop_toTopOf="@+id/contador" />
+
+    <Button
+        android:id="@+id/buttonEditar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="EDITAR"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:backgroundTint="#0000FF"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideMarginBottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideTeamEnd"
+        app:layout_constraintTop_toTopOf="@+id/guideRow5"
+        app:materialSizeOverlay="@style/SizeOverlay.Material3Expressive.Button.{Small}.Square" />
+
+    <TextView
+        android:id="@+id/x1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideRow3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideRow3" />
+
+    <TextView
+        android:id="@+id/x2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideMarginBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideRow4" />
+
+    <TextView
+        android:id="@+id/faltas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Faltas"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Equipo1Faltas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Equipo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Equipo 1"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Equipo1Score"
+        app:layout_constraintEnd_toEndOf="@+id/Equipo1Score"
+        app:layout_constraintStart_toStartOf="@+id/Equipo1Score"
+        />
+
+    <TextView
+        android:id="@+id/Equipo1Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="34"
+        android:textColor="#00FF00"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/x1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideRow1" />
+
+    <TextView
+        android:id="@+id/Equipo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Equipo 2"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Equipo2Score"
+        app:layout_constraintEnd_toEndOf="@+id/Equipo2Score"
+        app:layout_constraintStart_toStartOf="@+id/Equipo2Score"
+        />
+
+    <TextView
+        android:id="@+id/Equipo2Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18"
+        android:textColor="#00FF00"
+        android:textSize="100sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Equipo1Score" />
+
+    <Button
+        android:id="@+id/buttonCompartir"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="COMPARTIR"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:backgroundTint="#0000FF"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideMarginBottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideShare"
+        app:layout_constraintStart_toStartOf="@+id/guideTeam2Start"
+        app:layout_constraintTop_toTopOf="@+id/guideRow5"
+        app:materialSizeOverlay="@style/SizeOverlay.Material3Expressive.Button.{Small}.Square" />
+
+    <TextView
+        android:id="@+id/Equipo1Faltas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#00FF00"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideMarginBottom"
+        app:layout_constraintEnd_toStartOf="@+id/x2"
+        app:layout_constraintStart_toStartOf="@+id/guideTeamEnd"
+        app:layout_constraintTop_toTopOf="@+id/guideRow4" />
+
+    <TextView
+        android:id="@+id/Equipo2Faltas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#00FF00"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideMarginBottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideTeam2Start"
+        app:layout_constraintStart_toEndOf="@+id/x2"
+        app:layout_constraintTop_toTopOf="@+id/guideRow4" />
+
+    <Button
+        android:id="@+id/plus1Team1"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        android:text="+1"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:backgroundTint="#FFFFFF"
+        app:cornerRadius="50dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideTeamStart"
+        app:layout_constraintStart_toStartOf="@+id/guideMarginStart"
+        app:layout_constraintTop_toTopOf="@+id/Equipo1" />
+
+    <Button
+        android:id="@+id/faultTeam1"
+        android:layout_width="38dp"
+        android:layout_height="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        android:text="+"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:backgroundTint="#FFFFFF"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideMarginBottom"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideTeamEnd"
+        app:layout_constraintStart_toStartOf="@+id/guideTeamStart"
+        app:layout_constraintTop_toTopOf="@+id/guideRow4" />
+
+    <Button
+        android:id="@+id/faultTeam2"
+        android:layout_width="38dp"
+        android:layout_height="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        android:text="+"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:backgroundTint="#FFFFFF"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideMarginBottom"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideTeam2End"
+        app:layout_constraintStart_toStartOf="@+id/guideTeam2Start"
+        app:layout_constraintTop_toTopOf="@+id/guideRow4" />
+
+    <Button
+        android:id="@+id/boton_mas_dos"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        android:text="+2"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:backgroundTint="#FFFFFF"
+        app:cornerRadius="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/plus3Team1"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideTeamStart"
+        app:layout_constraintStart_toStartOf="@+id/guideMarginStart"
+        app:layout_constraintTop_toBottomOf="@+id/plus1Team1" />
+
+    <Button
+        android:id="@+id/plus3Team1"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        android:text="+3"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:backgroundTint="#FFFFFF"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Equipo1Score"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideTeamStart"
+        app:layout_constraintStart_toStartOf="@+id/guideMarginStart" />
+
+
+    <Button
+        android:id="@+id/plus1Team2"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        android:text="+1"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:backgroundTint="#FFFFFF"
+        app:cornerRadius="50dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideTeamStart"
+        app:layout_constraintStart_toStartOf="@+id/guideMarginStart"
+        app:layout_constraintTop_toTopOf="@+id/Equipo2" />
+
+    <Button
+        android:id="@+id/plus2Team2"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        android:text="+2"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:backgroundTint="#FFFFFF"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/TituloTeamdos"
+        app:layout_constraintDimensionRatio="1:1"
+
+        app:layout_constraintEnd_toStartOf="@+id/guideTeamStart"
+        app:layout_constraintStart_toStartOf="@+id/guideMarginStart"
+        app:layout_constraintTop_toBottomOf="@+id/plus1Team2" />
+
+    <Button
+        android:id="@+id/TituloTeamdos"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+        android:text="+3"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:backgroundTint="#FFFFFF"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Equipo2Score"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideTeamStart"
+        app:layout_constraintStart_toStartOf="@+id/guideMarginStart" />
+
+
+    <!--    GIDELINES-->
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideMidVErtical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideMarginStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideMarginEnd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideTeamEnd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideTeamStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideTeam2End"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideTeam2Start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.64" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideMarginTop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideMarginBottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideRow1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideRow2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideRow3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.47" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideRow4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideRow5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideShare"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
