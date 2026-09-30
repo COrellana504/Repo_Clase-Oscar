@@ -11,7 +11,7 @@
             android:id="@+id/botondeplay"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:backgroundTint="@color/black"
+            app:backgroundTint="@color/white"
             android:textColor="@color/black"
             app:icon="@drawable/baseline_play_circle_outline_24"
             app:iconGravity="textStart"
