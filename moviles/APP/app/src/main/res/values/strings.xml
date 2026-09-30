@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="mas_tres">+3</string>
+    <string name="mas_uno">+1</string>
+    <string name="mas_dos">+2</string>
+    <string name="cruz_sumar">+</string>
+    <string name="cero">0</string>
+    <string name="compartir">COMPARTIR</string>
+    <string name="dieciocho">18</string>
+    <string name="TituloTeamDos">Equipo 2</string>
+    <string name="treintaycuatro">34</string>
+    <string name="TituloTeamUno">Equipo 1</string>
+    <string name="faltas">Faltas</string>
+    <string name="equis">X</string>
+    <string name="editar">EDITAR</string>
+    <string name="primeroarribaderecha">1.º</string>
+    <string name="diezcerocero">10 : 00</string>
+</resources>
