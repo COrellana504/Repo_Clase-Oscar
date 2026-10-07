@@ -5,8 +5,7 @@ public class MainFallo {
      static void main(String[] args)
             throws InterruptedException {
 
-        CuentaBancaria cuenta =
-                new CuentaBancaria();
+        CuentaBancaria cuenta = new CuentaBancaria();
 
         Thread[] hilos = new Thread[100];
 
