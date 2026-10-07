@@ -1,4 +1,4 @@
-package PDF_TareasAsyncronas;
+package PDF_TareasAsyncronas.Ejercicio1;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
