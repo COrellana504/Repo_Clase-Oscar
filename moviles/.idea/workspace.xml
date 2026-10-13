@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1fdadc5-031e-4ac5-ad6b-21bb09646490" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/Repo_Clase-Oscar.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="a1fdadc5-031e-4ac5-ad6b-21bb09646490" name="Changes" comment="SE SUPONE DEBE CORRER ESTO" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +16,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="aprendiendo_sobre_hilos" />
+        <entry key="$PROJECT_DIR$/.." value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -60,7 +51,7 @@
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Aprendiendo__Moviles",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Cristopher Orellana/Desktop/PSP_Programacion de Servicios y Procesos/Repo_Clase-Oscar/Moviles"
   }
@@ -73,6 +64,27 @@
       <option name="presentableId" value="Default" />
       <updated>1791930452130</updated>
     </task>
+    <task id="LOCAL-00001" summary="SE SUPONE DEBE CORRER ESTO">
+      <option name="closed" value="true" />
+      <created>1791931165623</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1791931165623</updated>
+    </task>
+    <task id="LOCAL-00002" summary="SE SUPONE DEBE CORRER ESTO">
+      <option name="closed" value="true" />
+      <created>1791931197846</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1791931197846</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="SE SUPONE DEBE CORRER ESTO" />
+    <option name="LAST_COMMIT_MESSAGE" value="SE SUPONE DEBE CORRER ESTO" />
   </component>
 </project>
