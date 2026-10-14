@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">TrabajosClase</string>
+    <string name="app_name">Pantallas_moviles</string>
+    <string name="diezcerocero">10:00</string>
+    <string name="primeroarribaderecha">1º</string>
+    <string name="editar">editar</string>
+    <string name="equis">x</string>
+    <string name="faltas">faltas</string>
+    <string name="TituloTeamUno">EQUIPO 1</string>
+    <string name="treintaycuatro">34</string>
+    <string name="TituloTeamDos">EQUIPO 2</string>
+    <string name="dieciocho">18</string>
+    <string name="compartir">COMPARTIR</string>
+    <string name="cero">0</string>
+    <string name="mas_uno">+1</string>
+    <string name="cruz_sumar">+</string>
+    <string name="mas_tres">+3</string>
+    <string name="mas_dos">+2</string>
 </resources>
