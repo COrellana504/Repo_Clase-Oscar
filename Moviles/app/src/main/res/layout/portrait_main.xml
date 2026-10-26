@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ========== GUIDELINES VERTICALES ========== -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <!-- Columnas del menu inferior -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gCol1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gCol2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gCol3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <!-- ========== GUIDELINES HORIZONTALES ========== -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gToolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.17" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.34" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.46" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.58" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.70" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gRow5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.82" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86" />
+
+    <!-- ========== BARRA SUPERIOR (sin Toolbar ni menu) ========== -->
+    <ImageButton
+        android:id="@+id/btnMenu"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Menu"
+        android:src="@android:drawable/ic_menu_sort_by_size"
+        app:tint="?attr/colorOnSurface"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/gToolbar"
+        app:layout_constraintStart_toStartOf="@id/gStart" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TaskMate"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/gToolbar"
+        app:layout_constraintStart_toStartOf="@id/gText" />
+
+    <ImageButton
+        android:id="@+id/btnMore"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Mas"
+        android:src="@android:drawable/ic_menu_more"
+        app:tint="?attr/colorOnSurface"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/gToolbar"
+        app:layout_constraintEnd_toEndOf="@id/gEnd" />
+
+    <ImageButton
+        android:id="@+id/btnSearch"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Buscar"
+        android:src="@android:drawable/ic_menu_search"
+        app:tint="?attr/colorOnSurface"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/gToolbar"
+        app:layout_constraintEnd_toStartOf="@id/btnMore" />
+
+    <!-- ========== CABECERA ========== -->
+    <TextView
+        android:id="@+id/tvHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hola, Ana 👋"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+        app:layout_constraintTop_toTopOf="@id/gHeader"
+        app:layout_constraintStart_toStartOf="@id/gStart" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hoy tienes 3 tareas pendientes"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        app:layout_constraintTop_toBottomOf="@id/tvHello"
+        app:layout_constraintStart_toStartOf="@id/gStart" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:singleLine="true"
+        app:singleSelection="true"
+        app:selectionRequired="true"
+        app:layout_constraintTop_toTopOf="@id/gHeader"
+        app:layout_constraintEnd_toEndOf="@id/gEnd">
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Todas" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pendientes" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.Material3.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Completadas" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <!-- ========== TAREA 1 (entre gRow1 y gRow2) ========== -->
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/gRow1"
+        app:layout_constraintBottom_toBottomOf="@id/gRow2"
+        app:layout_constraintStart_toStartOf="@id/gStart" />
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estudiar Android XML"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        app:layout_constraintTop_toTopOf="@id/gRow1"
+        app:layout_constraintBottom_toTopOf="@id/time1"
+        app:layout_constraintStart_toStartOf="@id/gText"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/time1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hoy · 10:00"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        app:layout_constraintTop_toBottomOf="@id/title1"
+        app:layout_constraintBottom_toBottomOf="@id/gRow2"
+        app:layout_constraintStart_toStartOf="@id/gText" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/badge1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alta"
+        app:layout_constraintTop_toTopOf="@id/gRow1"
+        app:layout_constraintBottom_toBottomOf="@id/gRow2"
+        app:layout_constraintStart_toStartOf="@id/gBadge" />
+
+    <ImageButton
+        android:id="@+id/more1"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Mas opciones"
+        android:src="@android:drawable/ic_menu_more"
+        app:tint="?attr/colorOnSurface"
+        app:layout_constraintTop_toTopOf="@id/gRow1"
+        app:layout_constraintBottom_toBottomOf="@id/gRow2"
+        app:layout_constraintEnd_toEndOf="@id/gEnd" />
+
+    <!-- ========== TAREA 2 (entre gRow2 y gRow3) ========== -->
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/gRow2"
+        app:layout_constraintBottom_toBottomOf="@id/gRow3"
+        app:layout_constraintStart_toStartOf="@id/gStart" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hacer ejercicio"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        app:layout_constraintTop_toTopOf="@id/gRow2"
+        app:layout_constraintBottom_toTopOf="@id/time2"
+        app:layout_constraintStart_toStartOf="@id/gText"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/time2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hoy · 18:00"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        app:layout_constraintTop_toBottomOf="@id/title2"
+        app:layout_constraintBottom_toBottomOf="@id/gRow3"
+        app:layout_constraintStart_toStartOf="@id/gText" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/badge2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Media"
+        app:layout_constraintTop_toTopOf="@id/gRow2"
+        app:layout_constraintBottom_toBottomOf="@id/gRow3"
+        app:layout_constraintStart_toStartOf="@id/gBadge" />
+
+    <ImageButton
+        android:id="@+id/more2"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Mas opciones"
+        android:src="@android:drawable/ic_menu_more"
+        app:tint="?attr/colorOnSurface"
+        app:layout_constraintTop_toTopOf="@id/gRow2"
+        app:layout_constraintBottom_toBottomOf="@id/gRow3"
+        app:layout_constraintEnd_toEndOf="@id/gEnd" />
+
+    <!-- ========== TAREA 3 (entre gRow3 y gRow4) ========== -->
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/gRow3"
+        app:layout_constraintBottom_toBottomOf="@id/gRow4"
+        app:layout_constraintStart_toStartOf="@id/gStart" />
+
+    <TextView
+        android:id="@+id/title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leer un libro"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        app:layout_constraintTop_toTopOf="@id/gRow3"
+        app:layout_constraintBottom_toTopOf="@id/time3"
+        app:layout_constraintStart_toStartOf="@id/gText"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/time3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mañana · 09:00"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        app:layout_constraintTop_toBottomOf="@id/title3"
+        app:layout_constraintBottom_toBottomOf="@id/gRow4"
+        app:layout_constraintStart_toStartOf="@id/gText" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/badge3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Baja"
+        app:layout_constraintTop_toTopOf="@id/gRow3"
+        app:layout_constraintBottom_toBottomOf="@id/gRow4"
+        app:layout_constraintStart_toStartOf="@id/gBadge" />
+
+    <ImageButton
+        android:id="@+id/more3"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Mas opciones"
+        android:src="@android:drawable/ic_menu_more"
+        app:tint="?attr/colorOnSurface"
+        app:layout_constraintTop_toTopOf="@id/gRow3"
+        app:layout_constraintBottom_toBottomOf="@id/gRow4"
+        app:layout_constraintEnd_toEndOf="@id/gEnd" />
+
+    <!-- ========== TAREA 4 (entre gRow4 y gRow5) ========== -->
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/check4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/gRow4"
+        app:layout_constraintBottom_toBottomOf="@id/gRow5"
+        app:layout_constraintStart_toStartOf="@id/gStart" />
+
+    <TextView
+        android:id="@+id/title4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preparar la presentación"
+        android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+        app:layout_constraintTop_toTopOf="@id/gRow4"
+        app:layout_constraintBottom_toTopOf="@id/time4"
+        app:layout_constraintStart_toStartOf="@id/gText"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/time4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mañana · 12:00"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        app:layout_constraintTop_toBottomOf="@id/title4"
+        app:layout_constraintBottom_toBottomOf="@id/gRow5"
+        app:layout_constraintStart_toStartOf="@id/gText" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/badge4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alta"
+        app:layout_constraintTop_toTopOf="@id/gRow4"
+        app:layout_constraintBottom_toBottomOf="@id/gRow5"
+        app:layout_constraintStart_toStartOf="@id/gBadge" />
+
+    <ImageButton
+        android:id="@+id/more4"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Mas opciones"
+        android:src="@android:drawable/ic_menu_more"
+        app:tint="?attr/colorOnSurface"
+        app:layout_constraintTop_toTopOf="@id/gRow4"
+        app:layout_constraintBottom_toBottomOf="@id/gRow5"
+        app:layout_constraintEnd_toEndOf="@id/gEnd" />
+
+    <!-- ========== BOTON FLOTANTE ========== -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Añadir tarea"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toTopOf="@id/gNav"
+        app:layout_constraintEnd_toEndOf="@id/gEnd" />
+
+    <!-- ========== MENU INFERIOR (4 botones, sin menu XML) ========== -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/navInicio"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inicio"
+        app:icon="@android:drawable/ic_menu_view"
+        app:iconGravity="top"
+        app:layout_constraintTop_toTopOf="@id/gNav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/gCol1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/navTareas"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Tareas"
+        app:icon="@android:drawable/ic_menu_agenda"
+        app:iconGravity="top"
+        app:layout_constraintTop_toTopOf="@id/gNav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/gCol1"
+        app:layout_constraintEnd_toEndOf="@id/gCol2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/navStats"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Estadísticas"
+        app:icon="@android:drawable/ic_menu_sort_by_size"
+        app:iconGravity="top"
+        app:layout_constraintTop_toTopOf="@id/gNav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/gCol2"
+        app:layout_constraintEnd_toEndOf="@id/gCol3" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/navPerfil"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Perfil"
+        app:icon="@android:drawable/ic_menu_myplaces"
+        app:iconGravity="top"
+        app:layout_constraintTop_toTopOf="@id/gNav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/gCol3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
