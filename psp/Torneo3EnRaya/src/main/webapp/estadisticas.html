@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estadísticas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<h1>Estadísticas</h1>
+
+<h3>1. Victorias de cada jugador</h3>
+<a href="estadisticas">Ver victorias</a>
+
+<h3>2. Partidas de un jugador</h3>
+<form action="estadisticas" method="get">
+    <input type="text" name="jugador" placeholder="Nombre del jugador" required>
+    <button type="submit">Buscar</button>
+</form>
+
+<h3>3. Historial de una partida</h3>
+<form action="estadisticas" method="get">
+    <input type="number" name="partida" min="1" placeholder="Nº de partida" required>
+    <button type="submit">Ver movimientos</button>
+</form>
+
+<p><a href="index.html">← Menú</a></p>
+</body>
+</html>

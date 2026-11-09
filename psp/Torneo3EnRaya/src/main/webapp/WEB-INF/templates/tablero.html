@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Partida</title>
+    <link rel="stylesheet" th:href="@{/estilos.css}">
+</head>
+<body>
+<h2>Partida <span th:text="${partida.id}">1</span>:
+    <span th:text="${partida.jugadores[0]}">J1</span> vs
+    <span th:text="${partida.jugadores[1]}">J2</span></h2>
+
+<p th:if="${aviso != null}" th:text="${aviso}" style="color:red"></p>
+
+<table border="1" style="font-size:32px;text-align:center">
+    <tr th:each="fila, f : ${partida.tableroTexto}">
+        <td th:each="celda, c : ${fila}" width="60" height="60">
+            <span th:if="${!#strings.isEmpty(celda)}" th:text="${celda}"></span>
+            <a th:if="${#strings.isEmpty(celda) and !partida.terminada}"
+               th:href="@{/jugar(fila=${f.index}, col=${c.index})}">·</a>
+        </td>
+    </tr>
+</table>
+
+<div th:if="${partida.terminada}">
+    <div th:if="${partida.ganador != null}">
+        <h3>Ganador: <span th:text="${partida.ganador}"></span></h3>
+        <p>Perdedor: <span th:text="${partida.perdedor}"></span></p>
+    </div>
+    <h3 th:if="${partida.ganador == null}">¡Empate!</h3>
+    <p>Movimientos totales: <span th:text="${partida.numMovimientos}"></span></p>
+    <a th:href="@{/estadisticas(partida=${partida.id})}">Ver historial</a> |
+    <a th:href="@{/estadisticas}">Estadísticas</a>
+</div>
+
+<p th:if="${!partida.terminada}">Turno de: <b th:text="${partida.turnoActual}"></b></p>
+
+<p><a th:href="@{/index.html}">← Menú</a></p>
+</body>
+</html>

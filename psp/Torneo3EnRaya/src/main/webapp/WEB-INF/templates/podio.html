@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Podio</title>
+    <link rel="stylesheet" th:href="@{/estilos.css}">
+</head>
+<body>
+<h1 th:text="${titulo}">Puesto</h1>
+<h2><span th:text="${jugador}"></span> (<span th:text="${victorias}"></span> victorias)</h2>
+<p><a th:href="@{/finTorneo}">Siguiente puesto</a> |
+    <a th:href="@{/index.html}">Menú</a></p>
+</body>
+</html>

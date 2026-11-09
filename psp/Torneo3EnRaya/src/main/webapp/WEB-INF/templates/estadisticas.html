@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Estadísticas</title>
+    <link rel="stylesheet" th:href="@{/estilos.css}">
+</head>
+<body>
+<div th:if="${modo == 'victorias'}">
+    <h2>Victorias por jugador</h2>
+    <ul>
+        <li th:each="e : ${victorias}" th:text="${e.key} + ': ' + ${e.value} + ' victorias'"></li>
+    </ul>
+</div>
+
+<div th:if="${modo == 'jugador'}">
+    <h2>Partidas de <span th:text="${jugador}"></span></h2>
+    <ul>
+        <li th:each="linea : ${filas}" th:text="${linea}"></li>
+    </ul>
+</div>
+
+<div th:if="${modo == 'historial'}">
+    <h2>Historial de la partida <span th:text="${partida.id}"></span></h2>
+    <ol>
+        <li th:each="m : ${partida.movimientos}" th:text="${m}"></li>
+    </ol>
+    <p>Total de movimientos: <span th:text="${partida.numMovimientos}"></span></p>
+</div>
+
+<p><a th:href="@{/estadisticas.html}">← Estadísticas</a> |
+    <a th:href="@{/index.html}">Menú</a></p>
+</body>
+</html>

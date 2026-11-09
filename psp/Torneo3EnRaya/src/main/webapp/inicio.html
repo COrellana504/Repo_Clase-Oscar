@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva partida</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<h1>Nueva partida</h1>
+<form action="inicio" method="get">
+    <fieldset>
+        <legend>Jugador 1</legend>
+        <label>Nombre: <input type="text" name="j1" required></label>
+        <label>Símbolo: <input type="text" name="s1" maxlength="1" size="2" required></label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Jugador 2</legend>
+        <label>Nombre: <input type="text" name="j2" required></label>
+        <label>Símbolo: <input type="text" name="s2" maxlength="1" size="2" required></label>
+    </fieldset>
+
+    <button type="submit">¡Empezar!</button>
+</form>
+<p><a href="index.html">← Menú</a></p>
+</body>
+</html>

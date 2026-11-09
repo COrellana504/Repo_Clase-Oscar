@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Partida iniciada</title>
+    <link rel="stylesheet" th:href="@{/estilos.css}">
+</head>
+<body>
+<h2>Partida <span th:text="${partida.id}">1</span>:
+    <span th:text="${partida.jugadores[0]}">J1</span> (<span th:text="${s1}">X</span>) vs
+    <span th:text="${partida.jugadores[1]}">J2</span> (<span th:text="${s2}">O</span>)</h2>
+<p>Empieza: <b th:text="${partida.turnoActual}">J1</b></p>
+<a th:href="@{/jugar}">Ir al tablero</a>
+</body>
+</html>

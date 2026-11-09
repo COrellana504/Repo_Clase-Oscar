@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Torneo</title>
+  <link rel="stylesheet" th:href="@{/estilos.css}">
+</head>
+<body>
+<p th:text="${mensaje}">mensaje</p>
+<p><a th:href="@{|/${volver}|}">← Volver</a> |
+  <a th:href="@{/index.html}">Menú</a></p>
+</body>
+</html>
