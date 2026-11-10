@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Estado de la bóveda</title>
+</head>
+<body>
+<h1>Estado de la bóveda</h1>
+
+<p th:if="${boveda.desbloqueada}"> La bóveda está abierta.</p>
+
+<p th:if="${!boveda.desbloqueada and boveda.intentado}">
+     No hemos introducido la contraseña correcta.
+</p>
+
+<p th:if="${!boveda.intentado}">
+     Ni siquiera has intentado desbloquear la bóveda.
+</p>
+
+<p>
+    <a th:href="@{/ingresar}">Ir a ingresar contraseña</a> |
+    <a th:href="@{/contenido}">Ver contenido</a> |
+    <a th:href="@{/index.html}">Menú</a>
+</p>
+</body>
+</html>

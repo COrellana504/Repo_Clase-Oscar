@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingresar contraseña</title>
+</head>
+<body>
+<h1> Ingresar contraseña</h1>
+
+<!-- Caso 1: ni siquiera hay contraseña creada -->
+<div th:if="${!boveda.creada}">
+    <p>Primero debes crear una contraseña.</p>
+    <a th:href="@{/crear}">Crear contraseña</a>
+</div>
+
+<!-- Caso 2: hay contraseña y la bóveda sigue cerrada -->
+<div th:if="${boveda.creada and !boveda.desbloqueada}">
+    <p th:if="${!boveda.intentado}"> La bóveda está bloqueada. Ingresa la contraseña.</p>
+    <p th:if="${boveda.intentado}" style="color:red"> Contraseña incorrecta. La bóveda sigue bloqueada.</p>
+
+    <form th:action="@{/ingresar}" method="post">
+        <input type="number" name="n1" min="0" max="9" required>
+        <input type="number" name="n2" min="0" max="9" required>
+        <input type="number" name="n3" min="0" max="9" required>
+        <button type="submit">Probar</button>
+    </form>
+</div>
+
+<!-- Caso 3: ya se desbloqueó -->
+<div th:if="${boveda.desbloqueada}">
+    <p>Contraseña correcta. ¡La bóveda se desbloqueó!</p>
+    <a th:href="@{/estado}">Ver estado →</a>
+</div>
+
+<p><a th:href="@{/index.html}">← Menú</a></p>
+</body>
+</html>

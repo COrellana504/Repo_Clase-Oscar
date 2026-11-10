@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contraseña creada</title>
+</head>
+<body>
+<h1> Contraseña creada</h1>
+<p>Tus números son: <b th:text="${boveda.clave}">123</b></p>
+<p><a th:href="@{/ingresar}">Ir a ingresar la contraseña →</a></p>
+</body>
+</html>

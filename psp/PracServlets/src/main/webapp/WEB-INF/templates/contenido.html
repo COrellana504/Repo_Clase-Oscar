@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contenido</title>
+</head>
+<body>
+<h1> Bóveda desbloqueada</h1>
+<p> Contraseña correcta</p>
+<p> Bóveda abierta</p>
+<h2>Contenido: <span th:text="${contenido}">algo</span></h2>
+<p>(La contraseña era <b th:text="${boveda.clave}">000</b>)</p>
+<p><a th:href="@{/index.html}">← Menú</a></p>
+</body>
+</html>

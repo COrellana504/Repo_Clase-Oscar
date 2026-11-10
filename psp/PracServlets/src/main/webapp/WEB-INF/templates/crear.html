@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear contraseña</title>
+</head>
+<body>
+<h1>Crear contraseña</h1>
+
+<p th:if="${error != null}" th:text="${error}" style="color:red"></p>
+
+<form th:action="@{/crear}" method="post">
+    <input type="number" name="n1" min="0" max="9" required>
+    <input type="number" name="n2" min="0" max="9" required>
+    <input type="number" name="n3" min="0" max="9" required>
+    <button type="submit">Crear</button>
+</form>
+
+<p><a th:href="@{/index.html}">← Menú</a></p>
+</body>
+</html>
