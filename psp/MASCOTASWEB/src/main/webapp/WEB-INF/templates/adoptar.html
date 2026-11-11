@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Adoptar mascota</title>
+</head>
+<body>
+<h1>Adoptar mascota</h1>
+
+<p th:if="${error != null}" th:text="${error}" style="color:red"></p>
+
+<div th:if="${mascota.adoptada}">
+    <p>Ya tienes a <b th:text="${mascota.nombre}">nombre</b>.
+        Si adoptas otra, se reinician sus valores.</p>
+</div>
+
+<form th:action="@{/adoptar}" method="post">
+    <label>Nombre de tu mascota:
+        <input type="text" name="nombre" required>
+    </label>
+    <button type="submit">Adoptar</button>
+</form>
+
+<p><a th:href="@{/casa}">← Volver a casa</a></p>
+</body>
+</html>

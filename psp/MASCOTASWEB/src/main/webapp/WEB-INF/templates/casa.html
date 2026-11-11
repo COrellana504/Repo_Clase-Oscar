@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Casa de la mascota</title>
+</head>
+<body>
+<h1> Casa de la mascota</h1>
+
+<p th:if="${mensaje != null}" th:text="${mensaje}"
+   style="background:#ffffcc;padding:8px"></p>
+
+<div th:if="${!mascota.adoptada}">
+    <p>Todavía no has adoptado ninguna mascota.</p>
+    <a th:href="@{/adoptar}">Adoptar una mascota</a>
+</div>
+
+<div th:if="${mascota.adoptada}">
+    <h2>
+        <span th:text="${mascota.viva} ? 'si' : 'no'">¿?</span>
+        <span th:text="${mascota.nombre}">nombre</span>
+    </h2>
+    <ul>
+        <li>Hambre: <b th:text="${mascota.hambre}">0</b> / 100</li>
+        <li>Energía: <b th:text="${mascota.energia}">0</b> / 100</li>
+        <li>Felicidad: <b th:text="${mascota.felicidad}">0</b> / 100</li>
+    </ul>
+
+    <div th:if="${mascota.viva}">
+        <form th:action="@{/alimentar}" method="post" style="display:inline">
+            <button type="submit"> Alimentar</button>
+        </form>
+        <form th:action="@{/jugar}" method="post" style="display:inline">
+            <button type="submit"> Jugar</button>
+        </form>
+        <form th:action="@{/dormir}" method="post" style="display:inline">
+            <button type="submit"> Dormir</button>
+        </form>
+    </div>
+
+    <p><a th:href="@{/adoptar}">Adoptar otra</a></p>
+</div>
+
+<p>Has visitado esta página <b th:text="${mascota.visitas}">0</b> veces.</p>
+<p><a th:href="@{/index.html}">← Menú</a></p>
+</body>
+</html>
