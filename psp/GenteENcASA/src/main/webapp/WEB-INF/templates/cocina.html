@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COCINA</title>
+</head>
+<body>
+  <h1>Personas que pueden cocinar en esta casa</h1>
+
+  <form th:action="@{/cocina}" method="get">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="number" name="edad" placeholder="Edad" required>
+    <button type="submit">Comprobar</button>
+  </form>
+
+
+  <p><a th:href="@{/index.html}">← Volver</a></p>
+</body>
+</html>

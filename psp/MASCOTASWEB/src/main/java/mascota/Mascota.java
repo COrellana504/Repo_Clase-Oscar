@@ -9,7 +9,6 @@ public class Mascota implements Serializable {
     private String nombre = "sin nombre";
     private boolean adoptada = false;
     private int visitas = 0;
-
     private int hambre = 0;
     private int energia = 70;
     private int felicidad = 100;

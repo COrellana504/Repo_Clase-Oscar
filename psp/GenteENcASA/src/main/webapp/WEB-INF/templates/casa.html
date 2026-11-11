@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Visita actual</h1>
+<p><spam th:text="${nombre}"></spam></p>
+
+<p th:if="${#lists.isEmpty(personas.nombres)}">Todavía no vive nadie.</p>
+
+<ul>
+    <li th:each="n : ${personas.nombres}" th:text="${n}">nombre</li>
+</ul>
+
+<p>Total: <b th:text="${#lists.size(personas.nombres)}">0</b></p>
+
+<p><a th:href="@{/index.html}">← Volver</a></p>
+<p><a th:href="@{/cocina}"> Web Cocina</a></p>
+</body>
+</html>
