@@ -8,10 +8,10 @@ import java.util.List;
 
 public class Personas implements Serializable {
 
-    private String Nombre = "";
     private int edad = 0;
-    private boolean familia = false;
     private List<String> nombres = new ArrayList<>();
+
+
     public static Personas de(HttpSession session){
         Personas personas = (Personas) session.getAttribute("personas");
 
@@ -21,6 +21,7 @@ public class Personas implements Serializable {
         }
         return personas;
     }
+
 
     public void agregar(String nombre){
         nombres.add(nombre);

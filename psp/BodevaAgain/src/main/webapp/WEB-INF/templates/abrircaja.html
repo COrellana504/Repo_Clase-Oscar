@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>INGRESA LA CONTRASEÑA DE LA CAJA FUERTE</h1>
+
+<p> Contraseña: <a th:text="${clave}"></a></p>
+
+  <p th:if="${mensaje != null}" th:text="${mensaje}"></p>
+
+  <form th:action="@{/abrircaja}" method="get">
+    <input type="password" name="pass" placeholder="Contraseña" required>
+    <button type="submit">Abrir</button>
+  </form>
+</body>
+</html>
